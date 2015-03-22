@@ -1,0 +1,13 @@
+LXI H, 4200
+MOV B, M
+INX H
+MOV A, M
+DCR B
+Loop: INX H
+CMP M
+JNC Ahead
+MOV A, M
+Ahead: DCR B
+JNZ Loop
+STA 4300
+HLT
